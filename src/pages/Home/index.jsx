@@ -1,5 +1,7 @@
 import { categories } from "../../assets/mockData";
 import HeroImage from "../../assets/images/hero-image.jpg";
+import InfoSection from "../../components/InfoSection";
+import CategoriesSection from "../../components/CategoriesSection";
 
 const Home = () => {
   return (
@@ -36,6 +38,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <InfoSection />
+      <CategoriesSection />
     </div>
   );
 };
