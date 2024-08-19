@@ -1,9 +1,13 @@
 import {
+  FaFacebook,
+  FaGithub,
   FaHeadset,
+  FaLinkedin,
   FaLock,
   FaMoneyBillWave,
   FaShippingFast,
   FaTag,
+  FaTwitter,
 } from "react-icons/fa";
 
 import MenCategory from "../../assets/images/man.jpg";
@@ -17,7 +21,7 @@ export const navLinks = [
   },
   {
     title: "Shop",
-    href: "/",
+    href: "/shop",
   },
   {
     title: "Contact",
@@ -61,4 +65,27 @@ export const categories = [
   { title: "Men", imageSrc: MenCategory },
   { title: "Women", imageSrc: WomenCategory },
   { title: "Kids", imageSrc: KidsCategory },
+];
+
+export const socials = [
+  {
+    title: "Facebook",
+    Icon: FaFacebook,
+    href: "/",
+  },
+  {
+    title: "Twitter",
+    Icon: FaTwitter,
+    href: "/",
+  },
+  {
+    title: "GitHub",
+    Icon: FaGithub,
+    href: "/",
+  },
+  {
+    title: "LinkedIn",
+    Icon: FaLinkedin,
+    href: "/",
+  },
 ];
