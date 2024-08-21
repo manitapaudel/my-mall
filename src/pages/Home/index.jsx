@@ -7,7 +7,7 @@ import InfoSection from "../../components/InfoSection";
 import CategoriesSection from "../../components/CategoriesSection";
 import { setProducts } from "../../redux/productSlice";
 import ProductCard from "../../components/ProductCard";
-import Shop from "./Shop";
+import Shop from "../Shop";
 
 const Home = () => {
   const dispatch = useDispatch();
