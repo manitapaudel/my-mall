@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { FaTrashAlt } from "react-icons/fa";
 
+import { removeFromCart } from "../../redux/cartSlice";
 import EmptyCart from "../../assets/images/empty-cart.png";
 import Modal from "../../components/Modal";
 import ChangeAddress from "../../components/ChangeAddress";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+
   const cart = useSelector((state) => state.cart);
   const [address, setAddress] = useState("main street, 0012");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,7 +57,10 @@ const Cart = () => {
                         <button className="text-xl px-1 border-1">+</button>
                       </div>
                       <p>${(product.quantity * product.price).toFixed(2)}</p>
-                      <button className="text-red-500 hover:text-red-700">
+                      <button
+                        className="text-red-500 hover:text-red-700"
+                        onClick={() => dispatch(removeFromCart(product.id))}
+                      >
                         <FaTrashAlt />
                       </button>
                     </div>
