@@ -8,6 +8,7 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Order from "./pages/Order";
+import FilteredData from "./pages/FilteredData";
 
 function App() {
   const [order, setOrder] = useState(null);
@@ -27,6 +28,7 @@ function App() {
           path="/order-confirmation"
           element={<Order order={order} />}
         ></Route>
+        <Route path="/filter-data" element={<FilteredData />}></Route>
       </Routes>
       <Footer />
     </Router>
