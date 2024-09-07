@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FaTrashAlt } from "react-icons/fa";
 
@@ -13,6 +14,7 @@ import ChangeAddress from "../../components/ChangeAddress";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const cart = useSelector((state) => state.cart);
   const [address, setAddress] = useState("main street, 0012");
@@ -103,7 +105,10 @@ const Cart = () => {
                 <span>Total Price:</span>
                 <span>${cart.totalPrice}</span>
               </div>
-              <button className="w-full bg-red-600 text-white py-2 hover:bg-red-800">
+              <button
+                className="w-full bg-red-600 text-white py-2 hover:bg-red-800"
+                onClick={() => navigate("/checkout")}
+              >
                 Proceed to Checkout
               </button>
             </div>
