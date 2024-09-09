@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaCarSide, FaQuestion } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+
 import { addToCart } from "../../redux/cartSlice";
 
 const ProductDetail = () => {
@@ -41,15 +42,9 @@ const ProductDetail = () => {
             ${product?.price}
           </p>
           <div className="flex items-center mb-4 gap-x-2">
-            <input
-              id="quantity"
-              type="number"
-              min="1"
-              className="border p-1 w-16"
-            />
             <button
               className="bg-red-600 text-white py-1 5 px-4 hover:bg-red-800"
-              onClick={(e) => handleAddToCart(e, product.id)}
+              onClick={(e) => handleAddToCart(e, product)}
             >
               Add to Cart
             </button>
