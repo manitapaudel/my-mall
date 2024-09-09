@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Order from "./pages/Order";
 import FilteredData from "./pages/FilteredData";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   const [order, setOrder] = useState(null);
@@ -29,6 +30,7 @@ function App() {
           element={<Order order={order} />}
         ></Route>
         <Route path="/filter-data" element={<FilteredData />}></Route>
+        <Route path="/product/:id" element={<ProductDetail />}></Route>
       </Routes>
       <Footer />
     </Router>
