@@ -2,7 +2,7 @@ import { categories } from "../../assets/constants";
 
 const CategoriesSection = () => {
   return (
-    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       {categories.map(({ title, imageSrc }) => (
         <div
           key={title}
