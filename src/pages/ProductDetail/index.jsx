@@ -1,19 +1,26 @@
 import { useEffect, useState } from "react";
 import { FaCarSide, FaQuestion } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../../redux/cartSlice";
 
 const ProductDetail = () => {
-  const { id } = useParams();
-  console.log({ id });
-  const products = useSelector((state) => state.product.products);
   const [product, setProduct] = useState(null);
-  console.log({ products });
+  const products = useSelector((state) => state.product.products);
+  const { id } = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const newProduct = products.find((product) => product.id === parseInt(id));
     setProduct(newProduct);
   }, [id]);
+
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation();
+    e.preventDefault();
+    dispatch(addToCart(product));
+    alert("Product added successfully!");
+  };
 
   if (!products) return <div>Loading...</div>;
 
@@ -40,7 +47,10 @@ const ProductDetail = () => {
               min="1"
               className="border p-1 w-16"
             />
-            <button className="bg-red-600 text-white py-1 5 px-4 hover:bg-red-800">
+            <button
+              className="bg-red-600 text-white py-1 5 px-4 hover:bg-red-800"
+              onClick={(e) => handleAddToCart(e, product.id)}
+            >
               Add to Cart
             </button>
           </div>
