@@ -1,8 +1,15 @@
-# React + Vite
+<h1 align="center">My-mall</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+I know it sounds possesive, but it's not just for me. You can shop here too. Although, I advertised it as a huge store, with "millions" of products, there are only a few items.
 
-Currently, two official plugins are available:
+## Resources 
+### Tools
+- React
+- Vite
+- Redux toolkit
+- Tailwindcss
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> I followed along a tutorial by `Code With Yousaf` on YouTube for this project. A big thanks to this content creator! :)
+
+  Made with 💓and a bit of panic, by yours truly!
