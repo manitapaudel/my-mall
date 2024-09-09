@@ -24,11 +24,11 @@ const Cart = () => {
       {cart.products.length > 0 ? (
         <div>
           <h3 className="text-2xl font-semibold mb-4">SHOPPING CART</h3>
-          <div className="flex flex-col md:flex-row justify-between space-x-10 mt-8">
-            <div className="md:w-2/3">
+          <div className="flex flex-col lg:flex-row justify-between gap-10 mt-8">
+            <div className="lg:w-2/3">
               <div className="flex justify-between border-b items-center mb-4 text-xs font-bold">
                 <p>PRODUCTS</p>
-                <div className="flex space-x-8">
+                <div className="flex space-x-3 sm:space-x-8">
                   <p>PRICE</p>
                   <p>QUANTITY</p>
                   <p>SUBTOTAL</p>
@@ -39,21 +39,21 @@ const Cart = () => {
                 {cart.products.map((product) => (
                   <div
                     key={product.id}
-                    className="flex items-center justify-between p-3 border-b"
+                    className="flex items-center justify-between p-1 sm:p-3 border-b"
                   >
-                    <div className="md:flex items-center space-x-4">
+                    <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:space-x-4">
                       <img
                         src={product.image}
                         alt={product.name}
                         className="w-16 h-16 object-contain rounded"
                       />
-                      <div className="flex-1 ml-4">
+                      <div className="flex-1 lg:ml-4">
                         <h3 className="text-lg font-semibold">
                           {product.name}
                         </h3>
                       </div>
                     </div>
-                    <div className="flex space-x-12 items-center">
+                    <div className="flex space-x-4 sm:space-x-12 items-center">
                       <p>${product.price}</p>
                       <div className="flex items-center justify-center border">
                         <button
@@ -82,7 +82,7 @@ const Cart = () => {
                 ))}
               </div>
             </div>
-            <div className="md:1/3 bg-white p-6 rounded-lg shadow-md border">
+            <div className="lg:1/3 bg-white p-6 rounded-lg shadow-md border">
               <h3 className="text-sm font-semibold mb-5">CART TOTAL</h3>
               <div className="flex justify-between mb-5 border-b pb-1">
                 <span className="uppercase text-sm">Total Items:</span>
