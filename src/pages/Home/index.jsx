@@ -33,11 +33,11 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 2xl:h-[60vh] relative">
+        <div className="font-montserrat text-white w-full md:w-9/12 mt-8 md:mt-0 h-96 2xl:h-[60vh] relative">
           <img
             src={HeroImage}
-            alt="Two women looking happy with shopping bags"
-            className="h-full w-full opacity-80"
+            alt="A stack of boxes on a trolley"
+            className="h-full w-full opacity-80 object-cover"
           />
           <div className="absolute bottom-4 left-8">
             <h2 className="text-yellow-200 mb-3">Manita | my-mall</h2>
